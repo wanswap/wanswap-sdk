@@ -2,8 +2,8 @@ import { Price } from './fractions/price'
 import { TokenAmount } from './fractions/tokenAmount'
 import invariant from 'tiny-invariant'
 import JSBI from 'jsbi'
-import { pack, keccak256 } from '@ethersproject/solidity'
-import { getCreate2Address } from '@ethersproject/address'
+import { pack, keccak256 } from '@wansproject/solidity'
+import { getCreate2Address } from '@wansproject/address'
 
 import {
   BigintIsh,
