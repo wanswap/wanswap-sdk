@@ -1,7 +1,7 @@
 {
   "name": "@wanswap/sdk",
   "license": "MIT",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "🛠 An SDK for building applications on top of WanSwap.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -11,7 +11,7 @@
   "repository": "https://github.com/wanswap/wanwap-sdk.git",
   "keywords": [
     "wanswap",
-    "ethereum"
+    "wanchain"
   ],
   "module": "dist/sdk.esm.js",
   "scripts": {
