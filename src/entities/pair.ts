@@ -47,6 +47,18 @@ export class Pair {
     return PAIR_ADDRESS_CACHE[tokens[0].address][tokens[1].address]
   }
 
+  public static setAddress(tokenA: Token, tokenB: Token, pairAddress: string): void {
+    const tokens = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA] // does safety checks
+
+    PAIR_ADDRESS_CACHE = {
+      ...PAIR_ADDRESS_CACHE,
+      [tokens[0].address]: {
+        ...PAIR_ADDRESS_CACHE?.[tokens[0].address],
+        [tokens[1].address]: pairAddress
+      }
+    }
+  }
+
   public constructor(tokenAmountA: TokenAmount, tokenAmountB: TokenAmount) {
     const tokenAmounts = tokenAmountA.token.sortsBefore(tokenAmountB.token) // does safety checks
       ? [tokenAmountA, tokenAmountB]
